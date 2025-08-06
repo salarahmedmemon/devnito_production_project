@@ -59,7 +59,7 @@ html {
 
 @keyframes slide {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-80%); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Section Five Styling */
@@ -81,4 +81,61 @@ html {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Section Six Styling */
+.section-six {
+    background-image: url("../../public/img/SectionSixImages/bgImage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center -6vw;
+}
+
+
+/* w-[50%] h-[80%] bg-red-600 absolute bottom-0 right-0 rounded-tl-full rounded-tr-3xl */
+
+.overlay {
+    width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    right:0;
+    border-top-left-radius: 100%;
+    transition: width 420ms cubic-bezier(.22,.9,.32,1),
+              height 420ms cubic-bezier(.22,.9,.32,1),
+              opacity 280ms ease;
+    pointer-events: none; 
+}
+
+.project-one:hover .overlay {
+  width: 90%;   /* cover right half */
+  height: 70%; /* full height */
+  opacity: 1;
+}
+.project-two:hover .overlay {
+  width: 60%;   /* cover right half */
+  height: 100%; /* full height */
+  opacity: 1;
+}
+.project-three:hover .overlay {
+  width: 70%;   /* cover right half */
+  height: 80%; /* full height */
+  opacity: 1;
+}
+.project-four:hover .overlay {
+  width: 100%;   /* cover right half */
+  height: 80%; /* full height */
+  opacity: 1;
+}
+.project-five:hover .overlay {
+  width: 100%;   /* cover right half */
+  height: 80%; /* full height */
+  opacity: 1;
+}
+.project-six:hover .overlay {
+  width: 50%;   /* cover right half */
+  height: 80%; /* full height */
+  opacity: 1;
 }

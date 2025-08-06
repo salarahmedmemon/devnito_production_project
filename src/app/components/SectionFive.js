@@ -116,8 +116,9 @@ export default function SectionFive() {
         <div className="gradient-border text-white w-[40vw] sm:w-[20vw] md:w-[10vw] h-[8vh] md:h-[12vh] rounded p-1">
           <div className='w-[100%] h-[100%] bg-[#0A121A] flex flex-col items-center justify-center rounded'>
             <span className="text-xs sm:text-sm">Network</span>
-            <div className="w-[18vw] sm:w-[10vw] md:w-[5vw] h-[2vh] bg-white rounded" />
-          </div>
+            <div className="w-[18vw] sm:w-[10vw] md:w-[5vw] h-[2vh] rounded" />
+                <img src='/img/SectionThree/network.png' className='w-[90%] h-[100%] object-contain' />
+            </div>
         </div>
       </div>
     </section>

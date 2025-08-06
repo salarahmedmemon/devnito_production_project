@@ -53,7 +53,7 @@ const SectionFour = () => {
 
     // 3. return statement/jsx
     return(
-        <div className="w-full h-[45vh] sm:h-[50vh] md:h-[90vh] bg-[#EEEEEE] overflow-hidden">
+        <div className="w-full h-[45vh] sm:h-[50vh] md:h-[70vh] bg-[#EEEEEE] overflow-hidden">
             <div className="flex flex-col items-center justify-center pt-10 sm:pt-14 relative">
                 <img src='/img/SectionFour/rightCircleImage.png' className='w-[30vw] sm:w-[20vw] md:w-[16vw] absolute top-[-20%] sm:top-[-30%] md:top-[-50%] right-0' />
                 <img src='/img/SectionFour/leftCircleImage.png' className='w-[40vw] md:w-[35vw] absolute bottom-[-200%] sm:bottom-[-280%] md:bottom-[-500%] left-0' />
@@ -65,13 +65,66 @@ const SectionFour = () => {
 
             <div className="w-full overflow-hidden mt-8">
                  <div className="flex items-center gap-5 animate-slide w-max">
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh]  bg-red-600'></div>
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh] bg-red-600'></div>
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh] bg-red-600'></div>
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh] bg-red-600'></div>
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh] bg-red-600'></div>
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh] bg-red-600'></div>
-                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh] bg-red-600'></div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh] '>
+                        <img src='/img/SectionFour/client1.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client2.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client3.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client4.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client5.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw] h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client6.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client7.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client8.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client9.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client10.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client11.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client12.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client13.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client14.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client15.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client16.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client17.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client18.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client19.png' className='w-[100%] h-[100%] object-cover' />
+                    </div>
+                    <div className='w-[40vw] sm:w-[20vw] md:w-[16vw]s h-[10vh] sm:h-[15vh] md:h-[20vh]'>
+                        <img src='/img/SectionFour/client20.jpeg' className='w-[100%] h-[100%] object-cover' />
+                    </div>
                  </div>
             </div>
 
