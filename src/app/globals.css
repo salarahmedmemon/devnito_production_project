@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+.active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes upDownColumns {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-30px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(30px); }
+    100% { transform: translateY(0); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes downUpColumns {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(30px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+.first-column img, .third-column img{
+    animation: upDownColumns 3s ease-in-out infinite;
+}
+
+.second-column img {
+    animation: downUpColumns 3s ease-in-out infinite;
+}
+
+.images:hover img{
+    animation-play-state: paused !important;
+}
+
+
+
+/* Section Two Styling */
+
+
+/* Section Three Styling */
+.section-three {
+    background-image: url("../../public/img/SectionThree/backImage.png");
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    background-position: center;
+}
+
+/* Section Four Styling */
+.animate-slide {
+  animation: slide 80s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-80%); }
+}
+
+/* Section Five Styling */
+.gradient-border {
+    background: linear-gradient(90deg, #00f0ff, #9b00ff, #00f0ff);
+    background-size: 400% 400%;
+    animation: borderMove 6s linear infinite;
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
