@@ -15,10 +15,10 @@ const Header = () => {
   const mobileLinkRefs = useRef([]);
 
   const links = [
-    { href: "/home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
-    { href: "/studies", label: "Case Studies" },
+    { href: "/casestudies", label: "Case Studies" },
     { href: "/careers", label: "Careers Blog" },
     { href: "/details", label: "Details" },
     { href: "/faq", label: "FAQ'S" },
@@ -114,7 +114,7 @@ const Header = () => {
 
       {/* Logo */}
       <div>
-        <img className="w-20 md:w-30" src="/img/mobileLogo.png" alt="Logo" />
+        <img className="w-20 md:w-30 cursor-pointer" src="/img/mobileLogo.png" alt="Logo" />
       </div>
 
       {/* Desktop Navigation */}
@@ -136,11 +136,11 @@ const Header = () => {
       </div>
 
       {/* Contact Buttons */}
-      <div className="flex items-center gap-3">
-        <button className="w-8 h-8 bg-[#4C4886] flex items-center justify-center rounded">
+      <div className="header-btns flex items-center gap-3">
+        <button className="w-8 h-8 bg-[#4C4886] flex items-center justify-center rounded rotate-once cursor-pointer">
           <img className="w-3.5" src="/img/whatsapp.png" alt="WhatsApp" />
         </button>
-        <button className="w-8 h-8 bg-[#4C4886] flex items-center justify-center rounded">
+        <button className="w-8 h-8 bg-[#4C4886] flex items-center justify-center rounded rotate-once cursor-pointer">
           <img className="w-3.5" src="/img/gmail.png" alt="Gmail" />
         </button>
       </div>
