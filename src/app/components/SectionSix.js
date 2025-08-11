@@ -264,7 +264,7 @@ const SectionSix = () => {
 
       <div className="w-full h-1 gradient-border mt-6"></div>
 
-      <div className="w-full mt-5 flex items-center justify-center flex-col pb-10">
+     <div className="w-full mt-5 flex items-center justify-center flex-col pb-10">
         <img src="/img/SectionSixImages/footerLogo.png" className="w-20 sm:w-30 md:w-50" alt="logo" />
         <ul className="text-white flex items-center justify-center text-[3vw] md:text-[1.2vw] gap-2 md:gap-6 text-center p-2 sm:mt-2">
           <li><a>IT Resource</a></li>

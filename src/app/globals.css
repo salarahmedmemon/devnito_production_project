@@ -163,3 +163,18 @@ html {
   background-size: cover;
   background-position: center;
 }
+
+/* Section Three Styling */
+.section-three-bgImage {
+  background-image: url("../../public/img/SectionThree/backImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Section Five Styling */
+.section-five {
+  background-image: url("../../public/img/AboutPage/SectionFive/bgImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
