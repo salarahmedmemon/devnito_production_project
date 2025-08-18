@@ -31,7 +31,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className="w-full py-1 bg-[#0A131C]">
+    <div ref={footerRef} className="w-full py-1 bg-[#000C1B]">
       <div className="w-full h-full mt-5 flex items-center justify-center flex-col pb-10">
 
         {/* Logo */}
