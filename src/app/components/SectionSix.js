@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Footer from './Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +37,12 @@ const faqs = [
     q: 'Will NoCode replace developers?',
     a1: 'No. It lowers the barrier for many use-cases but developers remain crucial for complex logic.',
     a2: 'Developers and NoCode together enable faster, more maintainable solutions.',
+  },
+  {
+    id: 6,
+    q: 'Can NoCode scale for businesses?',
+    a1: 'Many NoCode platforms can scale for small-to-medium needs, but architecture matters.',
+    a2: 'For very large or highly-custom use-cases, hybrid or custom solutions are often used.',
   },
 ];
 
@@ -107,16 +114,16 @@ function FAQItem({ q, a1, a2, id }) {
   };
 
   return (
-    <div className="w-full sm:w-[45%] mt-2 gradient-border p-1 rounded">
-      <div className="w-full bg-[#00000091] text-white px-4 py-3 md:py-6 flex flex-col justify-center transition-all duration-300">
+    <div className="w-full gradient-border sm:w-[45%] p-[.4vw] sm:p-[.2vw] md:p-[.1vw] mt-[2vw] rounded-lg">
+      <div className="w-full bg-[#1C2B3B] rounded-lg text-white px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300">
         {/* Top Row */}
         <div className="flex items-center justify-between gap-4">
-          <p className="text-[4.2vw] sm:text-[1rem] md:text-[1.05rem]">{q}</p>
+          <p className="text-[4.2vw] sm:text-[1rem] md:text-[1.4rem]">{q}</p>
           <button
             onClick={toggle}
             aria-expanded={open}
             aria-controls={`faq-content-${id}`}
-            className="w-7 h-7 md:w-8 md:h-8 bg-white text-black pb-1 flex items-center justify-center rounded font-bold cursor-pointer"
+            className="w-7 h-7 md:w-8 md:h-8 bg-white text-[#767C9E] text-[2rem] pb-2 flex items-center justify-center rounded cursor-pointer"
           >
             <span ref={iconRef}>+</span>
           </button>
@@ -243,58 +250,26 @@ const SectionSix = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full section-six">
+    <section ref={sectionRef} className="w-full bg-[#000C1B] section-six">
       <div className="w-full h-[12vh] md:h-[18vh] bg-white">
-        <div className="flex flex-col items-center sm:items-start sm:ps-5 justify-center pt-4">
-          <div className="line w-12 sm:w-12 md:w-16 h-1 bg-[#4C4886]"></div>
-          <h1 ref={h1Ref} className="text-lg md:text-2xl font-bold">FAQ's</h1>
-          <h2 ref={h2Ref} className="text-[#4C4886] sm:text-lg md:text-3xl font-bold md:font-extrabold">
-            Frequently Asked Questions
-          </h2>
+        <div className="flex flex-col items-center sm:items-start sm:ps-5 md:ps-[6vw] justify-center pt-4">
+          <div className="line w-12 sm:w-12 md:w-22 h-[.8vw] sm:h-[.2vw] bg-[#4C4886]"></div>
+          <h1 ref={h1Ref} className="text-lg md:text-[2vw] leading-[8vw] sm:leading-[3vw] font-semibold">FAQ's</h1>
+          <h2 ref={h2Ref} className="text-[#4C4886] sm:text-lg md:text-3xl font-bold md:font-bold">Frequently Asked Questions</h2>
         </div>
       </div>
 
       <div className="w-full p-5">
-        <div className="flex items-center justify-center sm:gap-4 flex-wrap">
+        <div className="flex items-center justify-center sm:gap-4 flex-wrap mt-[6vw] mb-[3vw]">
           {faqs.map((f) => (
             <FAQItem key={f.id} id={f.id} q={f.q} a1={f.a1} a2={f.a2} />
           ))}
         </div>
       </div>
 
-      <div className="w-full h-1 gradient-border mt-6"></div>
+      <div className="w-full h-[.4vw] sm:h-[.1vw] gradient-border mt-6"></div>
 
-     <div className="w-full mt-5 flex items-center justify-center flex-col pb-10">
-        <img src="/img/SectionSixImages/footerLogo.png" className="w-20 sm:w-30 md:w-50" alt="logo" />
-        <ul className="text-white flex items-center justify-center text-[3vw] md:text-[1.2vw] gap-2 md:gap-6 text-center p-2 sm:mt-2">
-          <li><a>IT Resource</a></li>
-          <li><a>UI/UX Design</a></li>
-          <li><a>Web Animation</a></li>
-          <li><a>Digital Marketing</a></li>
-          <li><a>Video Animation</a></li>
-        </ul>
-
-        <div className="mt-2 sm:mt-3">
-          <div ref={iconsRef} className="flex items-center justify-center gap-2 md:gap-4">
-            <div className="w-6 sm:w-8 h-6 sm:h-8 rounded bg-amber-50 flex items-center justify-center social-icon overflow-hidden cursor-pointer">
-              <img src="/img/SectionSixImages/twitter.png" alt="twitter" className="w-[70%] h-[70%] object-contain" />
-            </div>
-            <div className="w-6 sm:w-8 h-6 sm:h-8 rounded bg-amber-50 flex items-center justify-center social-icon overflow-hidden cursor-pointer">
-              <img src="/img/SectionSixImages/facebook.png" alt="facebook" className="w-[70%] h-[70%] object-contain" />
-            </div>
-            <div className="w-6 sm:w-8 h-6 sm:h-8 rounded bg-amber-50 flex items-center justify-center social-icon overflow-hidden cursor-pointer">
-              <img src="/img/SectionSixImages/linkedin.png" alt="linkedin" className="w-[70%] h-[70%] object-contain" />
-            </div>
-          </div>
-        </div>
-
-        <div className='w-full h-[.2vh] bg-white mt-6'></div>
-        <div className='text-white text-[3.2vw] sm:text-[2vw] md:text-[1.2vw] flex items-center justify-center gap-2 mt-4 sm:mt-7 md:mt-8'>
-            <span>&copy; Copyright Reserved 2025</span>
-            <span>|</span>
-            <span>Terms &amp; Services</span>
-        </div>
-      </div>
+      <Footer />
     </section>
   );
 };

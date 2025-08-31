@@ -45,14 +45,14 @@ const SectionFive = () => {
   };
 
   return (
-    <div className="section-five w-full min-h-screen flex flex-col justify-center items-center px-4">
+    <div className="section-five w-full h-[60vh] md:min-h-screen flex flex-col justify-center items-center px-4">
       {/* TITLE */}
       <div className="relative text-center mb-10">
-        <div className="w-[59vw] sm:w-[40vw] md:w-[22vw] h-1 bg-[#71C1E6] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
+        <div className="w-[59vw] sm:w-[28vw] md:w-[16vw] h-[.2vw] sm:h-[.1vw] bg-[#71C1E6] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
         <h1 className="text-2xl sm:text-3xl md:text-4xl text-white pt-4 sm:pt-6">
           Testimonials
         </h1>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#71C1E6] font-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#71C1E6] font-semibold">
           Customer Feedback
         </h2>
       </div>

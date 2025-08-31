@@ -5,33 +5,43 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+  // 1. states/hook variables
   const footerRef = useRef(null);
   const iconRefs = useRef([]);
 
   useEffect(() => {
-    // Scroll animation for footer elements
-    gsap.from(footerRef.current.querySelectorAll(".fade-in-up"), {
-      scrollTrigger: {
-        trigger: footerRef.current,
-        start: "top 90%",
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.2,
-      ease: "power2.out",
-    });
-
-    // Hover rotation for icons
-    iconRefs.current.forEach((icon) => {
-      icon.addEventListener("mouseenter", () => {
-        gsap.to(icon, { rotate: "+=360", duration: 0.6, ease: "power2.inOut" });
+    let ctx = gsap.context(() => {
+      // Scroll animation for footer elements
+      gsap.from(footerRef.current.querySelectorAll(".fade-in-up"), {
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top 90%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out",
       });
-    });
+
+      // Hover rotation for icons
+      iconRefs.current.forEach((icon) => {
+        icon.addEventListener("mouseenter", () => {
+          gsap.to(icon, { rotate: "+=360", duration: 0.6, ease: "power2.inOut" });
+        });
+      });
+    }, footerRef);
+
+    return () => ctx.revert();
+    
   }, []);
 
+  // bg-[#000C1B] text-white
+
   return (
-    <div ref={footerRef} className="w-full py-1 bg-[#000C1B]">
+    <div ref={footerRef} className="w-full py-1 bg-[#000C1B] relative">
+      <div className='w-[0vw] h-[0vw] rounded-full absolute top-[30%] left-[0%] bg-[#FA1AC2] blur-circle'></div>
+    
       <div className="w-full h-full mt-5 flex items-center justify-center flex-col pb-10">
 
         {/* Logo */}

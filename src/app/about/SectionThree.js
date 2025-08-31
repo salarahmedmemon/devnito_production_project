@@ -1,13 +1,16 @@
-import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionThree = () => {
+  // 1. states/hook variables
+  const sectionRef = useRef(null);
+
   useEffect(() => {
-    // Title animation
+    let ctx = gsap.context(() => {
+      // Title animation
     gsap.from(".section-three-title", {
       y: -100,
       opacity: 0,
@@ -32,7 +35,36 @@ const SectionThree = () => {
         },
       });
     });
-  }, []);
+    }, sectionRef);
+
+    return () => ctx.revert();
+  },[]);
+
+  // useEffect(() => {
+  //   gsap.from(".section-three-title", {
+  //     y: -100,
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".section-three-title",
+  //       start: "top 80%",
+  //     },
+  //   });
+
+  //   gsap.utils.toArray(".project-card").forEach((card, i) => {
+  //     gsap.from(card, {
+  //       x: i % 2 === 0 ? -150 : 150,
+  //       opacity: 0,
+  //       duration: 1,
+  //       ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: card,
+  //         start: "top 85%",
+  //       },
+  //     });
+  //   });
+  // }, []);
 
   const projects = [
     { img: "/img/AboutPage/SectionThree/image.png", name: "Junaid Qureshi", subname: "Founded & CEO" },
@@ -44,7 +76,7 @@ const SectionThree = () => {
   ];
 
   return (
-    <div className="w-full sm:min-h-[70vh] md:min-h-screen bg-[#0A131C] p-5 md:p-20">
+    <div ref={sectionRef} className="w-full sm:min-h-[70vh] md:min-h-screen bg-[#0A131C] p-5 md:p-20 overflow-hidden">
       <div className="w-full h-full section-three-bgImage pt-2 sm:pt-4 md:pt-6">
         {/* TITLE */}
         <div className="relative section-three-title">

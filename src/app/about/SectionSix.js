@@ -60,11 +60,11 @@ const SectionSix = () => {
 
             {/* TITLE */}
             <div ref={titleRef} className="title relative text-center mb-10 opacity-0">
-                <div className="w-[59vw] sm:w-[40vw] md:w-[22vw] h-1 bg-[#4C4886] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
+                <div className="w-[75vw] sm:w-[35vw] md:w-[22vw] h-[.8vw] sm:h-[.3vw] md:h-[.2vw] bg-[#4C4886] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl pt-4 sm:pt-6">
                     Lets Talk With Us
                 </h1>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#4C4886] font-bold">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#4C4886] font-semibold">
                     Contact Us
                 </h2>
             </div>

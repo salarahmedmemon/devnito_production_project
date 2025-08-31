@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -74,11 +73,9 @@ export default function ServicesPage() {
     <>
       {/* Blank screen until loaded */}
       {!isLoaded ? (
-        <div className="w-full h-screen bg-white flex items-center justify-center">
-          {/* Optional loading animation or spinner */}
-          <span className="text-lg font-semibold text-gray-600">
-            Loading...
-          </span>
+        // loader
+        <div className="w-full h-screen bg-blue-950 flex items-center justify-center">
+          <h1 className="text-white text-3xl font-bold animate-pulse">Loading...</h1>
         </div>
       ) : (
         <>
@@ -95,17 +92,17 @@ export default function ServicesPage() {
               />
               <div className="w-full h-[50vh] md:h-[83vh] flex flex-col-reverse md:flex-row items-center justify-center md:gap-10 ps-25.5 pe-25.5">
                 <div className="text-container w-[50vw] sm:w-[90%] md:w-[50%] h-full flex flex-col items-center md:items-start justify-center">
-                  <button className="px-6 py-2 bg-white text-purple-800 text-[5vw] sm:text-[3vw] md:text-[2.5vw] font-bold rounded-lg mt-2 md:mt-20">
+                  <button className="px-6 py-2 bg-white text-[#4C4886] text-[5vw] sm:text-[3vw] md:text-[2.5vw] font-bold rounded-lg mt-2 md:mt-10">
                     WE OFFER
                   </button>
-                  <h1 className="text-white font-bold text-[15vw] sm:text-[10vw] md:text-[6.5vw]">
+                  <h1 className="text-white font-bold text-[15vw] sm:text-[10vw] md:text-[6.5vw] sm:leading-[10vw] md:leading-[7vw]">
                     SERVICES
                   </h1>
-                  <p className="text-white text-[4vw] sm:text-[2.4vw] md:text-[1.5vw] w-[90vw] sm:w-[100%] md:w-[70%] text-center md:text-start">
+                  <p className="text-white text-[4vw] sm:text-[2.4vw] md:text-[1.5vw] w-[90vw] sm:w-[100%] md:w-[70%] text-center md:text-start mt-[1vw]">
                     We have made quality our habit. It's not something that we just strive for - we live
                     by this principle every day.
                   </p>
-                  <button className="px-6 py-2 bg-white text-purple-800 text-[3.4vw] sm:text-[2.4vw] md:text-[1.2vw] font-bold rounded-lg mt-4 md:mt-10">
+                  <button className="px-4 sm:px-6 py-2 bg-white text-[#4C4886] text-[3.8vw] sm:text-[2.4vw] md:text-[1.2vw] font-bold rounded mt-4 md:mt-10">
                     VIEW ALL SERVICES
                   </button>
                 </div>

@@ -1,10 +1,7 @@
 'use client';
-
-import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import { useEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionTwo = () => {
@@ -23,124 +20,243 @@ const SectionTwo = () => {
   const contentData = [
     {
       title: 'Digital Branding & Communication',
-      image: '/img/sectTwo/dbc.jpeg',
-      description: `Promote your business to the masses and build a strong reputation in the Market
-      with our branding and communication services. Now you can focus on meeting
-      the bottom line while we get your branding message across to the target audience.
-      We have a knack for crafting memorable brand stories that win you lifelong customers and boost engagement for your brand.`,
+      image: '/img/sectTwo/digitalbranding.png',
+      description: `Climb the ladder of success by accumulating more leads and sales with 
+      our digital marketing services. We will help you achieve a substaintial ROI in a 
+      little time with search engine optimization, social media marketing, and Google Ads with 
+      our tried and tested strategies.`,
       listTitle: 'Creating Branding & Communication Agency for Curious Minds:',
-      listItems: [
-        'Company Profile & Brochure Design',
-        'Business Card Design',
-        'Corporate Identity Design',
-        'Packaging Design',
-        'Logo Design',
-      ],
+      listItems: {
+        col1: [
+          'Social Media Marketing (SMM)',
+          'Search Engine Optimization (SEO)',
+          'Content Marketing',
+          'Public Relation (PR)'
+        ],
+        col2: [
+          'Social Media Optimization (SMO)',
+          'Conversion Rate Optimization (CRO)',
+          'Online Reputation Management (ORM)',
+          'Online Translation Services'
+        ],
+        col3: [
+          'Pay Per Click (PPC)',
+          'Email Marketing',
+          'App Store Optimization (ASO)'
+        ]
+      },
     },
-    // ... other contentData entries unchanged ...
     {
       title: 'Web Development',
-      image: '/img/sectTwo/rwd.jpeg',
-      description: `Our web development team delivers fast, secure, and scalable websites tailored for your business needs.`,
-      listTitle: 'Building Web Solutions that Perform:',
-      listItems: [
-        'Responsive Website Design',
-        'E-Commerce Development',
-        'Content Management Systems',
-        'Performance Optimization',
-        'SEO Friendly Design',
-      ],
+      image: '/img/sectTwo/webdevelopment.png',
+      description: `Get an edge over your competitors and boost your profitability with magnetic web experiences
+      Digital Gravity is the choice of the UAE's leading brands for website design and web 
+      development services in Dubai. Whether it's custom web development or Wordpress and
+      web development, we make sure you get the best of both worlds in the form of a responsive,
+      secure, and high-performance website.`,
+      listTitle: 'We provide the following Web Development Services in the UAE:',
+      listItems: {
+        col1: [
+          'Wordpress Development',
+          'Sitecore Development',
+          'ASP.NET Development',
+          'Ibexa DXP',
+          'Angular js Development'
+        ],
+        col2: [
+          'SharePoint Development',
+          'PHP Development',
+          'CMS Development',
+          'Laravel Development',
+          'Website Maintenance Services',
+        ],
+        col3: [
+          'Enterprise Development',
+          'Joomla Development',
+          'Drupal Development',
+          'Python Web App Development'
+        ]
+      }
     },
     {
       title: 'Video Animation',
       image: '/img/sectTwo/va.jpeg',
-      description: `Engaging and creative video animations to communicate your message effectively.`,
-      listTitle: 'Our Video Animation Services Include:',
-      listItems: [
-        '2D Animation',
-        '3D Animation',
-        'Motion Graphics',
-        'Explainer Videos',
-        'Visual Effects',
-      ],
+      description: `Create bewitching videos for your brand and enthrall your prospective customers.
+      Digital Gravity is the best video production company in Dubai you can choose to make 
+      yourself look and sound awesome. We create everything you need from explainer videos to 
+      sales videos, product videos, branding videos, and a lot more in exactly the way you
+      envisioned them.`,
+      listTitle: 'Compelling, Aesthetically Appealing & Immersive Video Animation:',
+      listItems: {
+        col1: [
+          'Explainer Video Production',
+          '3D Architectural Walkthrughts',
+          'Whiteboard Animation Video'
+        ],
+        col2: [
+          'Product Demo Animation',
+          'Medical Animation Studio'
+        ],
+        col3: [
+          'Video Game Trailer',
+          'Character Animation Video'
+        ]
+      }
     },
     {
       title: 'Digital Marketing',
-      image: '/img/sectTwo/dm.jpeg',
-      description: `Comprehensive digital marketing strategies focused on growth and ROI.`,
-      listTitle: 'Digital Marketing Tactics We Use:',
-      listItems: [
-        'Social Media Marketing',
-        'Email Campaigns',
-        'Pay-Per-Click Advertising',
-        'Content Marketing',
-        'Influencer Outreach',
-      ],
+      image: '/img/sectTwo/digitalmarketing.png',
+      description: `Climb the ladder of success by accumulating more leads and sales with 
+      our digital marketing services. We will help you achieve a substantial ROI in a little 
+      time with search engine optimization, social media marketing, and Google ads with our 
+      tried and tested strategies.`,
+      listTitle: 'Communicable & Captivating Digital Marketing Services in the UAE:',
+      listItems: {
+        col1: [
+          'Social Media Marketing (SMM)',
+          'Search Engine Optimization (SEO)',
+          'Content Marketing',
+          'Public Reaction (PR)'
+        ],
+        col2: [
+          'Social Media Optimization (SMO)',
+          'Conversion Rate Optimization (CRO)',
+          'Online Reputation Management (ORM)',
+          'Online Translation Services'
+        ],
+        col3: [
+          'Pay Per Click (PPC)',
+          'Email Marketing',
+          'App Store Optimization (ASO)'
+        ]
+      }
     },
     {
       title: 'IT Resource',
-      image: '/img/sectTwo/itr.jpeg',
-      description: `We are an IT outsourcing company in dubai offering an extended range of services`,
-      listTitle: 'IT Resource Services:',
-      listItems: [
-        'IT Staffing Solutions',
-        'Project Management',
-        'Technical Support',
-        'Cloud Infrastructure',
-        'Cybersecurity',
-      ],
+      image: '/img/sectTwo/computer.png',
+      description: `We are an IT outsourcing company in Dubai offering an extended range of services including End User Support, Application Investment, Cloud & Infrastructure expertise. Our on-demand IT staff outsourcing solution in Dubai specializes exclusively for digital transformation with Custom Software Development, Software Testing & QA, Cloud Computing, Mobile & Web Development, Maintenance & Support, Blockchain Consulting, Data Science, Internet of Things, UI/UX Design, MVP Development, Nearshore/Offshore Software Development.`,
+      listTitle: ' Cost-effective and Comprehensive IT Outsourcing Services:',
+      listItems: {
+        col1: [
+          'Hire Mobile App Developer',
+          'Hire Scrum Master in Dubai',
+          'Hire AWS Resources in Dubai',
+          'Hire QA Resources in Dubai',
+          'Hire Node.js Developer in Dubai',
+          'Hire Azure Developer in Dubai',
+        ],
+        col2: [
+          'Hire React JS Developers in Dubai',
+          'Hire React Native Developers in Dubai',
+          'Hire Sharepoint Developers in Dubai',
+          'Hire Dynamics 365 Developers in Dubai',
+          'Hire Project Managers in Dubai'
+        ],
+        col3: [
+          'Hire Dot Net Developers in Dubai',
+          'Hire RPA in Dubai',
+          '3D Google Maps Integration',
+          'MarTech Consulting',
+          'Digital Cloud Transformation Solutions'
+        ]
+      },
     },
     {
       title: 'UI/UX Design',
-      image: '/img/sectTwo/uiux.jpeg',
-      description: `User interface and experience design that delights customers and drives engagement.`,
-      listTitle: 'Our UI/UX Design Expertise:',
-      listItems: [
-        'Wireframing & Prototyping',
-        'User Research & Testing',
-        'Interaction Design',
-        'Visual Design',
-        'Accessibility Compliance',
-      ],
+      image: '/img/sectTwo/uiuxdesign.png',
+      description: `Get bespoke user experience that meet all your design needs. 
+      We take pride in crafting stunning user interfaces that make it fun for your 
+      audience to intract with your brand and come back in the future for more. Whether 
+      it's a mobile app or a website, Digital Gravity's team of UX/UI designers is the best you 
+      can hire for UX/UI design services in Dubai.`,
+      listTitle: 'A Creative UI/UX Design Agency in Dubai with Business Centric Approach:',
+      listItems: {
+        col1: [
+          'PSD To Responnsive HTML',
+          'UX Design Workshop',
+          'Responsive Web Design'
+        ],
+        col2: [
+          'UX Design',
+          'Landing Page Design',
+        ],
+        col3: [
+          'UX Audit',
+          'Graphic Design'
+        ]
+      }
     },
     {
       title: 'Mobile App Development',
-      image: '/img/sectTwo/mad.jpeg',
-      description: `Building performant mobile applications for iOS and Android platforms.`,
-      listTitle: 'Mobile Applications We Build:',
-      listItems: [
-        'Native iOS & Android',
-        'Cross-platform Apps',
-        'App Store Deployment',
-        'Maintenance & Updates',
-        'User Analytics Integration',
-      ],
+      image: '/img/sectTwo/mobileappdevelopment.png',
+      description: `Leverage the power of mobile solutions and create a personalized marketing channel for your audience.
+      Digital Gravity offers comprehensive mobile app development services 
+      for iOS and Android devices. In the form of native and cross-platform applications, we carve out interfaces that win 
+      hearts and accelerate your growth.`,
+      listTitle: 'Innovative & Ingenious Mobile App Development Solutions in Dubai:',
+      listItems: {
+        col1: [
+          'Hybrid Apps',
+          'Android App Development',
+          'IOS App Development'
+        ],
+        col2: [
+          'React Native Apps',
+          'Flutter Apps'
+        ],
+        col3: [
+          'Progressive Web Apps',
+          'Ruby on Rails (ROR) Development'
+        ]
+      }
     },
     {
       title: 'E-Commerce Web Development',
-      image: '/img/sectTwo/ewd.jpeg',
-      description: `End-to-end e-commerce solutions that grow your online business.`,
-      listTitle: 'E-Commerce Services Included:',
-      listItems: [
-        'Online Store Setup',
-        'Payment Gateway Integration',
-        'Inventory Management',
-        'Custom Plugins & Modules',
-        'Customer Portal Development',
-      ],
+      image: '/img/sectTwo/ecommercedevelopment.png',
+      description: `Robust, sales-driven, and inituitive eCommerce solutions for online business yearning to scale in a 
+      competitive digital landscape. Digital Gravity is recognized as the top eCommerce web development 
+      company in Dubai with a team of tech-savvy professionals, who can integrate both simple and complex features into
+      your online store.`,
+      listTitle: 'You can recieve the following Ecommerce Web Development Services:',
+      listItems: {
+        col1: [
+          'Woo Commerce Development',
+          'Big Commerce Development'
+        ],
+        col2: [
+          'Miraki Development',
+          'Shopify Ecommerce Development'
+        ],
+        col3: [
+          'Magento Ecommerce Development',
+          'Shopify Plus Ecommerce Development'
+        ]
+      }
     },
     {
       title: 'Emerging Tech Development',
-      image: '/img/sectTwo/etd.jpeg',
-      description: `Innovative solutions using blockchain, AI, and other emerging technologies.`,
-      listTitle: 'Technologies We Work With:',
-      listItems: [
-        'Blockchain Development',
-        'Artificial Intelligence',
-        'Internet of Things',
-        'Augmented & Virtual Reality',
-        'Big Data Solutions',
-      ],
+      image: '/img/sectTwo/emergingtechdevelopment.png',
+      description: `Emerging technology is a team generally used to describe a new technology, but it may also refer to the
+      continuing development of an existing technology; It can have slightly different meaning when used in different areas, such as media, business, science, or education.`,
+      listTitle: 'Emerging technology include a variety of technologies such as:',
+      listItems: {
+        col1: [
+          'Educational Technology',
+          'Biotechnology',
+          'Quantum Computing',
+          'Advanced Artificial Intelligence (AAI)'
+        ],
+        col2: [
+          'Information Technology',
+          'Robotics',
+          'Neurotechnology'
+        ],
+        col3: [
+          'Nanotechnology',
+          'Climate Intervention Technologies',
+          'Communication'
+        ]
+      }
     },
   ];
 
@@ -148,79 +264,63 @@ const SectionTwo = () => {
   const [translateX, setTranslateX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [isCentering, setIsCentering] = useState(false);
-
   const navListRef = useRef(null);
   const animationFrameId = useRef(null);
-  const animationSpeed = 1; // pixels per frame
-
+  const animationSpeed = 1;
   const pauseAnimation = () => setAnimating(false);
-
+  const containerRef = useRef(null);
   const h1Ref = useRef(null);
   const h2Ref = useRef(null);
+  const currentContent = contentData[activeIndex];
+  const secondColRef = useRef(null);
+  const thirdColRef = useRef(null);
 
+  // GSAP Animations
   useEffect(() => {
-    // Animate h1 (from right)
-    gsap.from(h1Ref.current, {
-      x: 100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: h1Ref.current,
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-      }
-    });
-
-    // Animate h2 (from left)
-    gsap.from(h2Ref.current, {
-      x: -100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: h2Ref.current,
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-      }
-    });
+    if (!containerRef.current) return;
+    let ctx = gsap.context(() => {
+      gsap.from(h1Ref.current, {
+        x: 100, opacity: 0, duration: 1,
+        scrollTrigger: { trigger: h1Ref.current, start: 'top 80%' }
+      });
+      gsap.from(h2Ref.current, {
+        x: -100, opacity: 0, duration: 1,
+        scrollTrigger: { trigger: h2Ref.current, start: 'top 80%' }
+      });
+    }, containerRef);
+    return () => ctx.revert();
   }, []);
 
+  // Auto scroll loop
   useEffect(() => {
     if (isCentering || !animating) return;
-
-    const listWidth = navListRef.current?.scrollWidth / 2 || 0;
-
+    const listWidth = navListRef.current?.scrollWidth / 4 || 0;
     const step = () => {
       setTranslateX((prev) => {
         let next = prev - animationSpeed;
-        if (Math.abs(next) > listWidth) {
-          return 0;
-        }
+        if (Math.abs(next) > listWidth) return 0;
         return next;
       });
       animationFrameId.current = requestAnimationFrame(step);
     };
-
     animationFrameId.current = requestAnimationFrame(step);
-
     return () => cancelAnimationFrame(animationFrameId.current);
   }, [animating, isCentering]);
 
   const handleClick = (index) => {
     if (!navListRef.current) return;
-
     setAnimating(false);
     setIsCentering(true);
     setActiveIndex(index);
 
-    const containerWidth = navListRef.current.parentElement.offsetWidth;
-    const linksElements = navListRef.current.querySelectorAll('li');
+    const container = navListRef.current.parentElement;
+    const containerWidth = container.offsetWidth;
+    const linksElements = navListRef.current.querySelectorAll("li");
     const clickedLink = linksElements[index];
     if (!clickedLink) return;
 
-    const leftPos = clickedLink.offsetLeft;
-    const linkWidth = clickedLink.offsetWidth;
-
-    const targetTranslateX = leftPos - containerWidth / 2 + linkWidth / 2;
+    const linkCenter = clickedLink.offsetLeft + clickedLink.offsetWidth / 2;
+    const targetTranslateX = linkCenter - containerWidth / 2;
 
     const animationDuration = 800;
     const fps = 60;
@@ -234,10 +334,8 @@ const SectionTwo = () => {
       frame++;
       const progress = frame / totalFrames;
       const easeProgress = easeOutCubic(progress);
-
       const currentTranslateX = startTranslateX + deltaX * easeProgress;
       setTranslateX(currentTranslateX);
-
       if (frame < totalFrames) {
         animationFrameId.current = requestAnimationFrame(animateToCenter);
       } else {
@@ -253,141 +351,77 @@ const SectionTwo = () => {
     return 1 - Math.pow(1 - t, 3);
   }
 
-  // -------------------------
-  // GSAP: Entrance animation for the nav list (from left)
-  // -------------------------
+  // ✅ Initial centering on mount
   useEffect(() => {
-    const el = navListRef.current;
-    if (!el) return;
-
-    // Ensure initial visibility & position from left
-    // We animate x from -200 to 0, then clear transform so your translateX (state) can control movement later.
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 85%', // adjust when the animation should trigger
-        toggleActions: 'play none none none',
-      },
-    });
-
-    tl.fromTo(
-      el,
-      { x: -200, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: 'power2.out',
-        onComplete: () => {
-          // clear the transform so React inline style (translateX) can be used afterwards without conflict
-          gsap.set(el, { clearProps: 'transform,opacity' });
-        },
-      }
-    );
-
-    // cleanup
-    return () => {
-      if (ScrollTrigger.getById(tl.scrollTrigger?.id)) {
-        tl.scrollTrigger.kill();
-      }
-      tl.kill();
-    };
+    if (!navListRef.current) return;
+    const container = navListRef.current.parentElement;
+    const containerWidth = container.offsetWidth;
+    const linksElements = navListRef.current.querySelectorAll("li");
+    const activeLink = linksElements[activeIndex];
+    if (!activeLink) return;
+    const linkCenter = activeLink.offsetLeft + activeLink.offsetWidth / 2;
+    const targetTranslateX = linkCenter - containerWidth / 2;
+    setTranslateX(-targetTranslateX);
   }, []);
 
-
-
-  const secondColRef = useRef(null);
-  const thirdColRef = useRef(null);
-
+  // GSAP Scroll animations for content
   useEffect(() => {
-  // second column: slide in from RIGHT
-  if (secondColRef.current) {
-    gsap.fromTo(
-      secondColRef.current,
-      { x: 150, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: secondColRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
-  }
-
-  // third column: slide in from RIGHT (slightly delayed)
-  if (thirdColRef.current) {
-    gsap.fromTo(
-      thirdColRef.current,
-      { x: 150, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.9,
-        ease: 'power3.out',
-        delay: 0.15,
-        scrollTrigger: {
-          trigger: thirdColRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
-  }
-
-  // cleanup (optional)
-  return () => {
-    ScrollTrigger.getAll().forEach(st => st.kill());
-  };
-}, []);
-
-  const currentContent = contentData[activeIndex];
+    if (secondColRef.current) {
+      gsap.fromTo(secondColRef.current, { x: 150, opacity: 0 }, {
+        x: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: secondColRef.current, start: 'top 80%' }
+      });
+    }
+    if (thirdColRef.current) {
+      gsap.fromTo(thirdColRef.current, { x: 150, opacity: 0 }, {
+        x: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay: 0.15,
+        scrollTrigger: { trigger: thirdColRef.current, start: 'top 80%' }
+      });
+    }
+    return () => { ScrollTrigger.getAll().forEach(st => st.kill()); };
+  }, []);
 
   return (
-    <div className="w-full h-sreen md:min-h-screen overflow-hidden relative bg-white">
-      <img className="absolute top-[-5%] sm:top-[-10%] right-0 w-20 sm:w-30" src="/img/sectTwo/circle.png" alt="circle" />
-      <img className="hidden md:block absolute bottom-[-30%] left-0 w-120" src="/img/sectTwo/secondCircle.png" alt="circle" />
-
-      <div className="flex flex-col items-center justify-center pt-4">
-        <div className="line w-50 md:w-72 h-1 bg-[#4C4886]"></div>
-        <h1 ref={h1Ref} className="md:text-2xl md:font-bold">Services We Offering</h1>
-        <h2 ref={h2Ref} className="md:text-3xl text-[#4C4886] text-lg font-bold md:font-extrabold">
-          Certified Excellence
-        </h2>
+    <div ref={containerRef} className="w-full min-h-screen overflow-hidden relative bg-[#EEEEEE]">
+      {/* right circle */}
+      <div className='w-[25vw] h-[25vw] rounded-full bg-[#BAD3EF] absolute p-[.2vw] top-2 right-[-12vw]'>
+        <div className='w-full h-full rounded-full bg-gradient-to-b from-[#E2E8EE] to-[#E9EBEE]'></div>
+      </div>
+      {/* left circle */}
+      <div className='w-[40vw] h-[40vw] rounded-full bg-[#fff] absolute p-[.2vw] bottom-[-13vw] left-[-5vw]'>
+        <div className='w-full h-full rounded-full bg-gradient-to-b from-[#F2F3F5] to-[#F1F2F2]'></div>
+      </div>
+      
+      <div className="flex flex-col items-center justify-center pt-14">
+        <div className="line w-35 sm:w-54 md:w-72 h-[.4vw] sm:h-[.3vw] md:h-[.2vw] bg-[#4C4886]"></div>
+        <h1 ref={h1Ref} className="text-[5vw] sm:text-[3vw] md:text-[2vw] md:font-semibold">Services We Offering</h1>
+        <h2 ref={h2Ref} className="text-[5.5vw] sm:text-[3.5vw] md:text-[2.5vw] leading-[6vw] sm:leading-[4vw] md:leading-[2.6vw] text-[#4C4886] text-lg font-bold">Certified Excellence</h2>
       </div>
 
-      {/* Navigation with horizontal scroll on small screens */}
-      <div className="nav-wrapper w-full mt-2 md:mt-6 overflow-hidden relative h-10">
+      <div className="nav-wrapper w-full mt-2 md:mt-10 overflow-hidden relative h-10">
         <ul
-          className="nav-list flex whitespace-nowrap gap-3 pt-3 md:pt-0 text-[10px] sm:text-xs md:text-lg
-            overflow-x-auto no-scrollbar scroll-smooth absolute top-0 left-[-140vw] sm:left-[-36vw] md:left-[-14vw]"
+          className="nav-list flex whitespace-nowrap gap-3 pt-3 md:pt-0 text-[4vw] sm:text-[2vw] md:text-[1vw]
+            absolute top-0"
           ref={navListRef}
           onMouseEnter={pauseAnimation}
           style={{
             transform: `translateX(${translateX}px)`,
             transition: isCentering ? 'none' : 'transform 0.5s ease',
-            /* Disable user select on small scroll */
-            userSelect: 'none',
           }}
         >
           {[...links, ...links].map((link, i) => (
             <li
               key={i}
-              className={`nav-item inline-block cursor-pointer ${
-                i % links.length === activeIndex ? 'font-bold text-[#4C4886] text-[13px] md:text-[20px]' : 'text-black opacity-70'
-              }`}
+              className={`nav-item inline-block cursor-pointer ${i % links.length === activeIndex
+                  ? 'font-semibold text-[#000] text-[4.5vw] sm:text-[2.4vw] md:text-[1.3vw]'
+                  : 'text-[#ADADAD] opacity-70'
+                }`}
             >
               <a
                 href={link.href}
                 onClick={(e) => {
-                  e.preventDefault(); // Prevent page reload/navigation
-                  if (!isCentering) {
-                    handleClick(i % links.length);
-                  }
+                  e.preventDefault();
+                  if (!isCentering) handleClick(i % links.length);
                 }}
                 className="px-2 py-1 whitespace-nowrap inline-block"
               >
@@ -398,50 +432,42 @@ const SectionTwo = () => {
         </ul>
       </div>
 
-      {/* Dynamic 3-column content */}
       {currentContent && (
-        <div
-          className={`w-full flex items-center p-6 gap-4
-          flex-col sm:flex-col md:flex-row
-          h-auto sm:h-auto md:h-96
-        `}
-        >
-          {/* First Column - Image */}
-          <div className="flex justify-center items-center w-full sm:w-full md:w-200 md:rounded-lg md:mt-20 bg-white rounded">
-            <img className='md:rounded-lg md:me-50'
+        <div className="w-full h-full flex p-2 sm:p-10 pt-0 gap-4 flex-col md:flex-row">
+          {/* first column for image */}
+          <div className="flex justify-center items-center md:rounded-lg rounded-full z-1000">
+            <img className="w-[71vw] mt-[5vw]"
               src={currentContent.image}
               alt={currentContent.title}
-              // className="max-w-full h-auto sm:max-w-xs md:max-w-none"
             />
           </div>
+              {/* second column from content */}
+          <div ref={secondColRef} className="flex flex-col w-full md:w-300 pt-[4vw] p-4 py-0">
+            <h2 className="text-lg md:text-[1.6vw] font-semibold mb-2 border-l-3 ps-[1.2vw] sm:ps-[.6vw] border-[#4C4886]"> {currentContent.title}</h2>
+            <p className="text-sm md:text-[1vw] text-[#666666] w-[100%] sm:w-[90%]">{currentContent.description}</p>
+            <span className="text-[#071652] font-semibold text-sm md:text-[1vw] my-4">{currentContent.listTitle}</span>
 
-          {/* Second Column - Content */}
-          <div ref={secondColRef} className="flex flex-col w-full md:ps-20 sm:w-full md:w-200 justify-center bg-white rounded p-4">
-            <h2 className="text-lg font-bold mb-2 md:text-left">
-              <span className="text-[#071652]">|</span> {currentContent.title}
-            </h2>
-            <p className="text-sm">{currentContent.description}</p>
-
-            <span className="text-[#071652] font-bold text-sm mt-2">{currentContent.listTitle}</span>
-
-            <ul className="list-disc list-inside mt-2 text-[12px] md:text-sm flex flex-wrap justify-start items-center gap-2">
-              {currentContent.listItems.map((item, idx) => (
-                <li key={idx}>
-                  <a>{item}</a>
-                </li>
-              ))}
+            <ul className="list-disc list-inside mt-2 flex flex-wrap gap-2 sm:gap-0">
+              {Array.isArray(currentContent.listItems)
+                ? currentContent.listItems.map((item, i) => (
+                    <li key={i} className="mt-1 text-[3vw] sm:text-[2vw] md:text-[.7vw] text-[#666666] font-semibold">{item}</li>
+                  ))
+                : Object.entries(currentContent.listItems).map(([colKey, colItems], colIndex) => (
+                    <div key={colIndex} className="w-[30%]">
+                      <ul className="list-disc ps-2 text-[3vw] sm:text-[1.4vw] md:text-[.7vw] text-[#666666] font-semibold">
+                        {colItems.map((item, i) => (
+                          <li key={i} className="mt-1">{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+              }
             </ul>
           </div>
-
-          {/* Third Column - Circles */}
-          <div ref={thirdColRef} className="flex flex-row sm:flex-row md:flex-col border p-2 rounded-2xl justify-center items-center space-x-4 md:space-x-0 md:space-y-4 mt-6 md:mt-0 w-full sm:w-full md:w-auto">
+              {/* third column for navigation */}
+          <div ref={thirdColRef} className="h-[1vw] md:h-[12vw] w-[70vw] sm:w-[40vw] md:w-[2.5vw] flex flex-row md:flex-col border p-2 rounded-2xl mx-auto md:mx-0 justify-center items-center mt-6 md:mt-[12vw] space-x-2 sm:space-x-4 md:space-x-0 md:space-y-2">
             {contentData.map((_, idx) => (
-              <div
-                key={idx}
-                className={`w-4 h-4 rounded-full border-1 ${
-                  idx === activeIndex ? 'bg-blue-950' : 'bg-transparent'
-                }`}
-              ></div>
+              <div key={idx} className={`w-[2vw] sm:w-[1vw] md:w-[.6vw] h-[2vw] sm:h-[1vw] md:h-[.6vw] rounded-full ${idx === activeIndex ? 'bg-blue-950' : 'bg-transparent border'}`}></div>
             ))}
           </div>
         </div>

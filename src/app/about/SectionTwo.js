@@ -57,16 +57,12 @@ const SectionTwo = () => {
     return (
         <div
             ref={sectionRef}
-            className="w-full min-h-screen relative overflow-hidden pb-2 md:pt-5 bg-[#EEEEEE]"
+            className="w-full min-h-screen relative overflow-hidden pb-2 pt-[4vw] sm:pt-[2.6vw] md:pt-8 bg-[#EEEEEE]"
         >
-            <img
-                src="/img/AboutPage/SectionTwo/half-circle.png"
-                className="absolute right-0 top-[-2%] sm:top-[-10%] w-[20vw] md:w-[10vw]"
-            />
 
             {/* TITLE */}
             <div className="relative section-two-title">
-                <div className="w-[55vw] sm:w-[40vw] md:w-[20vw] h-1 bg-[#4C4886] absolute left-[23%] sm:left-[30%] md:left-[39.5%] top-[5vw] sm:top-[20%] md:top-[18%]"></div>
+                <div className="w-[63vw] sm:w-[30vw] md:w-[18vw] h-[.6vw] sm:h-[.3vw] md:h-[.2vw] bg-[#4C4886] absolute left-[19%] sm:left-[35.5%] md:left-[41%] top-[5vw] sm:top-[20%] md:top-[18%]"></div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl text-center pt-4 sm:pt-6">
                     Our Company
                 </h1>
@@ -84,38 +80,40 @@ const SectionTwo = () => {
 
                 {/* TEXT CONTENT */}
                 <div className="md:w-[55%] h-[100%] section-two-text">
-                    <div className="w-[48%] sm:w-[32%] md:w-[28%] md:ms-[2vw] mx-auto md:mx-0 mt-4 flex items-center justify-between gap-2">
-                        <div className="w-1 sm:w-[2%] h-6 sm:h-8 bg-[#4C4886]"></div>
-                        <h3 className="text-xl sm:text-3xl text-[#4C4886] font-bold">
+                    <div className="w-[58%] sm:w-[32%] md:w-[28%] md:ms-[2vw] mx-auto md:mx-0 mt-4 flex items-center justify-between gap-2">
+                        <div className="w-[.9vw] sm:w-[2%] h-6 sm:h-8 bg-[#4C4886]"></div>
+                        <h3 className="text-xl sm:text-3xl text-[#4C4886] me-[17px] font-semibold">
                             Our Principle
                         </h3>
                     </div>
-                    <p className="text-[#AFAFAF] text-center md:text-start md:ms-6 mt-2 sm:mt-4 sm:text-lg">
-                        Lorem ipsum is Simply dummy text of the printing and the typesetting
-                        industry. Lorem ipsum has been the industry's stencenturies.
+                    <p className="text-[#AFAFAF] p-[3vw] sm:p-0 text-center md:text-start md:ms-6 mt-2 sm:mt-4 sm:text-lg">
+                        Lorem ipsum is Simply dummy text of the printing and typesetting industry. 
+                        Lorem ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        When an unknown printer took a gallery of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries.
                     </p>
-                    <span className="text-[#4C4886] ms-3 sm:ms-6 sm:text-lg font-bold mt-4 text-center md:text-start block">
+                    <span className="text-[#4C4886] ms-3 sm:ms-6 md:text-[1vw] font-bold mt-4 text-center md:text-start block">
                         Cost-effective and Comprehensive IT Outsourcing Services:
                     </span>
 
                     <div className="w-full mt-4 md:mt-8 md:flex md:items-center md:justify-between md:gap-2 md:ps-6">
                         <div className="w-[90%] mx-auto text-center md:text-start">
-                            <h4 className="text-[#4C4886] font-bold text-lg">Tailored Excellence</h4>
-                            <p className="text-[#AFAFAF]">
+                            <h4 className="text-[#4C4886] font-semibold text-lg">Tailored Excellence</h4>
+                            <p className="text-[#AFAFAF] md:text-[1vw]">
                                 We Deliver Custom Software And SaaS Solutions that are Specially
                                 Designed To Meet The Unique needs of your Business.
                             </p>
                         </div>
                         <div className="w-[90%] mx-auto text-center md:text-start mt-4 md:mt-0">
-                            <h4 className="text-[#4C4886] font-bold text-lg">Transparent Collaboration</h4>
-                            <p className="text-[#AFAFAF]">
+                            <h4 className="text-[#4C4886] font-semibold text-lg">Transparent Collaboration</h4>
+                            <p className="text-[#AFAFAF] md:text-[1vw]">
                                 We Deliver Custom Software And SaaS Solutions that are Specially
                                 Designed To Meet The Unique needs of your Business.
                             </p>
                         </div>
-                        <div className="w-[90%] mx-auto text-center md:text-start mt-4 md:mt-0">
-                            <h4 className="text-[#4C4886] font-bold text-lg">Clients Security</h4>
-                            <p className="text-[#AFAFAF]">
+                        <div className="w-[90%] mx-auto text-center md:text-start mt-4 md:mt-0 mb-[7vw] sm:mb-[3vw] md:mb-0">
+                            <h4 className="text-[#4C4886] font-semibold text-lg">Clients Security</h4>
+                            <p className="text-[#AFAFAF] md:text-[1vw]">
                                 We Deliver Custom Software And SaaS Solutions that are Specially
                                 Designed To Meet The Unique needs of your Business.
                             </p>

@@ -91,7 +91,7 @@ const Header = () => {
         <img className="w-5" src="/img/hamburger.png" alt="Menu" />
         <div
             ref={menuRef}
-            className="absolute top-15 left-0 bg-white z-[999] w-[40vw] sm:w-[30vw] sm:left-[-3%] h-[30vh] sm:h-[40vh] shadow-xl"
+            className="absolute top-15 left-0 bg-white z-[999] w-[40vw] sm:w-[30vw] sm:left-[-3%] h-[35vh] sm:h-[45vh] shadow-xl"
             style={{ transform: "translateX(-100%)", opacity: 0 }}
           >
 

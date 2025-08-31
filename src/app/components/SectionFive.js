@@ -84,21 +84,20 @@ export default function SectionFive() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#0A1119] py-12">
-      <div className="flex flex-col items-center justify-center pt-4">
-        <div className="line w-50 md:w-72 h-1 bg-white mb-3"></div>
-        <h1 ref={h1Ref} className="md:text-2xl md:font-bold text-white">
-          Progress &amp; its Indicators
-        </h1>
+    <section ref={sectionRef} className="w-full relative bg-[#0A1119] py-10 sm:py-16 overflow-hidden">
+      <div className='w-[0vw] h-[0vw] rounded-full absolute top-[-30%] sm:top-[-14%] left-[0%] sm:left-[38%] md:left-[42%] bg-[#FA1AC2] blur-circle'></div>
+      <div className="flex flex-col items-center justify-center">
+        <div className="line w-[55vw] sm:w-[34vw] md:w-80 h-[.4vw] sm:h-[.2vw] md:h-[.1vw] bg-white"></div>
+        <h1 ref={h1Ref} className="text-[5vw] sm:text-[3vw] md:text-[2vw] md:font-semibold text-white">Progress &amp; its Indicators</h1>
       </div>
 
       <div className="w-full flex items-center justify-center flex-wrap gap-4 mt-8 px-4">
         {counters.map((c) => (
           <div
             key={c.id}
-            className="gradient-border p-1 text-white w-[40vw] sm:w-[20vw] md:w-[10vw] h-[8vh] md:h-[12vh] flex flex-col items-center justify-center rounded"
+            className="gradient-border p-[.4vw] sm:p-[.2vw] md:p-[.1vw] text-white w-[40vw] sm:w-[20vw] md:w-[10vw] h-[8vh] md:h-[12vh] flex flex-col items-center justify-center rounded-lg"
           >
-            <div className='bg-[#0A121A] w-[100%] h-[100%] flex flex-col items-center justify-center rounded'>
+            <div className='bg-[#0A121A] w-[100%] h-[100%] flex flex-col items-center justify-center rounded-lg'>
                 <span className="text-xs sm:text-sm">{c.label}</span>
                 <span
                 ref={(el) => (counterRefs.current[c.id] = el)}
@@ -113,8 +112,8 @@ export default function SectionFive() {
         ))}
 
         {/* Example progress bar for ETH item (optional visual) */}
-        <div className="gradient-border text-white w-[40vw] sm:w-[20vw] md:w-[10vw] h-[8vh] md:h-[12vh] rounded p-1">
-          <div className='w-[100%] h-[100%] bg-[#0A121A] flex flex-col items-center justify-center rounded'>
+        <div className="gradient-border text-white w-[40vw] sm:w-[20vw] md:w-[10vw] h-[8vh] md:h-[12vh] rounded-lg p-[.4vw] sm:p-[.2vw] md:p-[.1vw]">
+          <div className='w-[100%] h-[100%] bg-[#0A121A] flex flex-col items-center justify-center rounded-lg'>
             <span className="text-xs sm:text-sm">Network</span>
             <div className="w-[18vw] sm:w-[10vw] md:w-[5vw] h-[2vh] rounded" />
                 <img src='/img/SectionThree/network.png' className='w-[90%] h-[100%] object-contain' />

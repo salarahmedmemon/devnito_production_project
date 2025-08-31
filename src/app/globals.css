@@ -68,20 +68,46 @@ html {
 }
 
 /* Section Four Styling */
+.animate-slide div {
+  box-shadow: 0px 14px 10px rgba(0, 0, 0, 0.187), 
+              -2px 0px 6px rgba(0, 0, 0, 0.187), 
+               2px 0px 6px rgba(0, 0, 0, 0.187);
+}
+
+
 .animate-slide {
-  animation: slide 80s linear infinite;
+  animation: slide 6s ease-in-out infinite;
 }
 
 @keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0%   { transform: translateX(0); }        /* initial */
+  20%  { transform: translateX(-10%); }     /* step 1 */
+  40%  { transform: translateX(-20%); }     /* step 2 */
+  60%  { transform: translateX(-30%); }     /* step 3 */     /* go back halfway */
+  100% { transform: translateX(0); }        /* return to start */
 }
+
 
 /* Section Five Styling */
 .gradient-border {
-    background: linear-gradient(90deg, #00f0ff, #9b00ff, #00f0ff);
-    background-size: 400% 400%;
-    animation: borderMove 6s linear infinite;
+    background: linear-gradient(90deg, #FA1AC2, #1AE4FA, #1CDE63D9);
+    /* background-size: 400% 400%; */
+    /* animation: borderMove 7s linear infinite; */
+}
+
+.blur-circle {
+  box-shadow: 100px 100px 100px 45px #ad1b88;
+  transition: .4s ease;
+  animation: scaleAnimation 5s linear infinite;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
 }
 
 @keyframes borderMove {
@@ -103,8 +129,8 @@ html {
     background-image: url("../../public/img/SectionSixImages/bgImage.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center -6vw;
+    background-size: 80vw;
+    /* background-position: center -6vw; */
 }
 
 
@@ -113,7 +139,7 @@ html {
 .overlay {
     width: 0%;
     height: 0%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.855);
     position: absolute;
     bottom: 0;
     right:0;
@@ -195,3 +221,6 @@ html {
       background-repeat: no-repeat;
     }
 }
+
+
+/* Case Studies Page */
